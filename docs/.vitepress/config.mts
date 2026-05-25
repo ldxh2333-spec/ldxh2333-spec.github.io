@@ -3,6 +3,7 @@ import { sidebar } from "./sidebar.mjs";
 
 export default defineConfig({
   lang: "zh-CN",
+  base: "/lidexin.github.io/",
   title: "个人学习笔记",
   description: "公开版学习笔记与项目实践总结",
   cleanUrls: true,
