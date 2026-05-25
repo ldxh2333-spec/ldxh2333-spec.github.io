@@ -1,4 +1,4 @@
-# lidexin.github.io
+# ldxh2333-spec.github.io
 
 我的个人笔记，从有道云中同步到此。
 

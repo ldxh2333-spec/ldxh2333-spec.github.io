@@ -3,7 +3,7 @@ import { sidebar } from "./sidebar.mjs";
 
 export default defineConfig({
   lang: "zh-CN",
-  base: "/lidexin.github.io/",
+  base: "/",
   title: "个人学习笔记",
   description: "公开版学习笔记与项目实践总结",
   cleanUrls: true,
@@ -22,7 +22,7 @@ export default defineConfig({
     nav: [
       { text: "首页", link: "/" },
       { text: "笔记", link: "/notes/" },
-      { text: "GitHub", link: "https://github.com/ldxh2333-spec/lidexin.github.io" }
+      { text: "GitHub", link: "https://github.com/ldxh2333-spec/ldxh2333-spec.github.io" }
     ],
     sidebar,
     outline: {
@@ -37,7 +37,7 @@ export default defineConfig({
       next: "下一篇"
     },
     socialLinks: [
-      { icon: "github", link: "https://github.com/ldxh2333-spec/lidexin.github.io" }
+      { icon: "github", link: "https://github.com/ldxh2333-spec/ldxh2333-spec.github.io" }
     ]
   }
 });
