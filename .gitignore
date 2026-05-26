@@ -1,4 +1,5 @@
 node_modules
+.npm-cache
 .vitepress/cache
 .vitepress/dist
 docs/.vitepress/cache

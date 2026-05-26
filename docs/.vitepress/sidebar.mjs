@@ -1,172 +1,274 @@
 export const sidebar = {
   "/notes/": [
     {
-      "text": "八股项目",
+      "text": "学习笔记",
       "collapsed": false,
       "items": [
         {
-          "text": "**目前需要完善的知识：**",
-          "link": "/notes/八股项目/30天牢固基础"
+          "text": "前端基础",
+          "collapsed": false,
+          "items": [
+            {
+              "text": "CSS 常用易混属性",
+              "link": "/notes/学习笔记/前端基础/CSS 常用易混属性"
+            }
+          ]
         },
         {
-          "text": "1.秒传（SparkMD5 分片计算 + 并发控制）【需要代码】",
-          "link": "/notes/八股项目/两个项目的整体理解思路/云盘"
+          "text": "框架学习",
+          "collapsed": false,
+          "items": [
+            {
+              "text": "Vue2 学习笔记",
+              "link": "/notes/学习笔记/框架学习/Vue2 学习笔记"
+            },
+            {
+              "text": "Vue3 快速上手",
+              "link": "/notes/学习笔记/框架学习/Vue3 快速上手"
+            },
+            {
+              "text": "Vue3 学习笔记",
+              "link": "/notes/学习笔记/框架学习/Vue3 学习笔记"
+            }
+          ]
         },
         {
-          "text": "0.问题",
-          "link": "/notes/八股项目/两个项目的整体理解思路/blog(简记)"
-        },
-        {
-          "text": "一，css",
-          "link": "/notes/八股项目/面试八股"
-        },
-        {
-          "text": "0.计划表",
-          "link": "/notes/八股项目/手撕题"
+          "text": "工程协作",
+          "collapsed": false,
+          "items": [
+            {
+              "text": "Git 版本管理使用",
+              "link": "/notes/学习笔记/工程协作/Git 版本管理使用"
+            }
+          ]
         }
       ]
     },
     {
-      "text": "面试题目记忆复盘",
+      "text": "项目实践",
       "collapsed": false,
       "items": [
         {
-          "text": "项目1：博客",
-          "link": "/notes/面试题目记忆复盘/博客"
+          "text": "实习项目",
+          "collapsed": false,
+          "items": [
+            {
+              "text": "公园基础数据管理",
+              "link": "/notes/项目实践/实习项目/公园基础数据管理"
+            }
+          ]
         },
         {
-          "text": "1.MVC,MVVM模型",
-          "link": "/notes/面试题目记忆复盘/简介要求"
+          "text": "问题解决",
+          "collapsed": false,
+          "items": [
+            {
+              "text": "开发中常用的数组方法",
+              "link": "/notes/项目实践/问题解决/开发中常用的数组方法"
+            },
+            {
+              "text": "文件下载导出",
+              "link": "/notes/项目实践/问题解决/文件下载导出"
+            },
+            {
+              "text": "Element-UI 表头自定义渲染",
+              "link": "/notes/项目实践/问题解决/Element-UI 表头自定义渲染"
+            },
+            {
+              "text": "ElementUI 文本溢出提示",
+              "link": "/notes/项目实践/问题解决/ElementUI 文本溢出提示"
+            },
+            {
+              "text": "Git 命令使用记忆",
+              "link": "/notes/项目实践/问题解决/Git 命令使用记忆"
+            },
+            {
+              "text": "Git 命令速记",
+              "link": "/notes/项目实践/问题解决/Git 命令速记"
+            },
+            {
+              "text": "some 和 every 用法速记",
+              "link": "/notes/项目实践/问题解决/some 和 every 用法速记"
+            }
+          ]
         },
         {
-          "text": "云盘",
-          "link": "/notes/面试题目记忆复盘/云盘"
+          "text": "需求理解",
+          "collapsed": false,
+          "items": [
+            {
+              "text": "养护考核管理需求",
+              "link": "/notes/项目实践/需求理解/养护考核管理需求"
+            }
+          ]
+        },
+        {
+          "text": "个人项目",
+          "collapsed": false,
+          "items": [
+            {
+              "text": "做项目时的疑问",
+              "link": "/notes/项目实践/个人项目/做项目时的疑问"
+            }
+          ]
+        },
+        {
+          "text": "开发总结",
+          "collapsed": false,
+          "items": [
+            {
+              "text": "开发日记总结",
+              "link": "/notes/项目实践/开发总结/开发日记总结"
+            }
+          ]
         }
       ]
     },
     {
-      "text": "前端实习记录",
+      "text": "专题速记",
       "collapsed": false,
       "items": [
         {
-          "text": "1.从业人员",
-          "link": "/notes/前端实习记录/1.7公园基础数据管理"
+          "text": "Vue",
+          "collapsed": false,
+          "items": [
+            {
+              "text": "Vue 路由速记",
+              "link": "/notes/专题速记/Vue/Vue 路由速记"
+            },
+            {
+              "text": "Vue 易忘知识点",
+              "link": "/notes/专题速记/Vue/Vue 易忘知识点"
+            },
+            {
+              "text": "Vue 组件封装",
+              "link": "/notes/专题速记/Vue/Vue 组件封装"
+            }
+          ]
         },
         {
-          "text": "开发中经常使用的数组方法-速记笔记",
-          "link": "/notes/前端实习记录/实习过程中遇到的问题以及解决方法与知识点/1.开发中常用的数组方法"
+          "text": "Axios",
+          "collapsed": false,
+          "items": [
+            {
+              "text": "Axios 速记",
+              "link": "/notes/专题速记/Axios/Axios 速记"
+            },
+            {
+              "text": "Axios Config 使用速记",
+              "link": "/notes/专题速记/Axios/Axios Config 使用速记"
+            }
+          ]
         },
         {
-          "text": "12.30-文件下载导出",
-          "link": "/notes/前端实习记录/实习过程中遇到的问题以及解决方法与知识点/12.30-文件下载导出"
+          "text": "JavaScript",
+          "collapsed": false,
+          "items": [
+            {
+              "text": "JavaScript 数组速记",
+              "link": "/notes/专题速记/JavaScript/JavaScript 数组速记"
+            },
+            {
+              "text": "JavaScript 易忘知识",
+              "link": "/notes/专题速记/JavaScript/JavaScript 易忘知识"
+            }
+          ]
         },
         {
-          "text": "2.1-12.31-git命令",
-          "link": "/notes/前端实习记录/实习过程中遇到的问题以及解决方法与知识点/2.1-12.31-git命令"
+          "text": "CSS",
+          "collapsed": false,
+          "items": [
+            {
+              "text": "CSS 易忘知识",
+              "link": "/notes/专题速记/CSS/CSS 易忘知识"
+            }
+          ]
         },
         {
-          "text": "切换分支 vs 合并/推送的关系",
-          "link": "/notes/前端实习记录/实习过程中遇到的问题以及解决方法与知识点/2.git命令使用记忆"
+          "text": "异步编程",
+          "collapsed": false,
+          "items": [
+            {
+              "text": "Promise 速记",
+              "link": "/notes/专题速记/异步编程/Promise 速记"
+            },
+            {
+              "text": "Proxy 速记",
+              "link": "/notes/专题速记/异步编程/Proxy 速记"
+            }
+          ]
         },
         {
-          "text": "详解",
-          "link": "/notes/前端实习记录/实习过程中遇到的问题以及解决方法与知识点/Element-UI 表头自定义渲染函数"
-        },
-        {
-          "text": "elementui-show-overflow-tooltip",
-          "link": "/notes/前端实习记录/实习过程中遇到的问题以及解决方法与知识点/elementui-show-overflow-tooltip"
-        },
-        {
-          "text": "some,every用法速记",
-          "link": "/notes/前端实习记录/实习过程中遇到的问题以及解决方法与知识点/some,every用法速记"
-        },
-        {
-          "text": "养护考核管理",
-          "link": "/notes/前端实习记录/需求理解/12.31-公园科showcase-需求确认/养护考核管理"
+          "text": "TypeScript",
+          "collapsed": false,
+          "items": [
+            {
+              "text": "TypeScript 速记",
+              "link": "/notes/专题速记/TypeScript/TypeScript 速记"
+            }
+          ]
         }
       ]
     },
     {
-      "text": "前端学习笔记",
+      "text": "面试准备",
       "collapsed": false,
       "items": [
         {
-          "text": "css常用容易记混的属性样式",
-          "link": "/notes/前端学习笔记/css笔记/css常用容易记混的属性样式"
+          "text": "八股整理",
+          "collapsed": false,
+          "items": [
+            {
+              "text": "30 天基础巩固",
+              "link": "/notes/面试准备/八股整理/30 天基础巩固"
+            },
+            {
+              "text": "前端面试八股",
+              "link": "/notes/面试准备/八股整理/前端面试八股"
+            }
+          ]
         },
         {
-          "text": "视频同步笔记：狂神聊Git",
-          "link": "/notes/前端学习笔记/git版本管理使用"
+          "text": "手撕题",
+          "collapsed": false,
+          "items": [
+            {
+              "text": "手撕题整理",
+              "link": "/notes/面试准备/手撕题/手撕题整理"
+            }
+          ]
         },
         {
-          "text": "## Props组件交互",
-          "link": "/notes/前端学习笔记/vue3md文档/Vue3"
+          "text": "项目讲解",
+          "collapsed": false,
+          "items": [
+            {
+              "text": "博客项目讲解",
+              "link": "/notes/面试准备/项目讲解/博客项目讲解"
+            },
+            {
+              "text": "云盘项目讲解",
+              "link": "/notes/面试准备/项目讲解/云盘项目讲解"
+            }
+          ]
         },
         {
-          "text": "笔记",
-          "link": "/notes/前端学习笔记/vue学习笔记/vue2学习笔记"
-        },
-        {
-          "text": "Vue3快速上手",
-          "link": "/notes/前端学习笔记/vue学习笔记/vue3学习笔记（快速上手）"
-        }
-      ]
-    },
-    {
-      "text": "自学项目知识碎片",
-      "collapsed": false,
-      "items": [
-        {
-          "text": "开发日记总结",
-          "link": "/notes/自学项目知识碎片/开发日记总结"
-        },
-        {
-          "text": "vue路由速记笔记",
-          "link": "/notes/自学项目知识碎片/项目开发易忘语法知识/1.1vue路由速记笔记"
-        },
-        {
-          "text": "1.2vue易忘知识点疑难点",
-          "link": "/notes/自学项目知识碎片/项目开发易忘语法知识/1.2vue易忘知识点疑难点"
-        },
-        {
-          "text": "axios速记笔记",
-          "link": "/notes/自学项目知识碎片/项目开发易忘语法知识/2.1axios速记笔记"
-        },
-        {
-          "text": "2.2axios—config使用速记",
-          "link": "/notes/自学项目知识碎片/项目开发易忘语法知识/2.2axios—config使用速记"
-        },
-        {
-          "text": "js容易遗忘的知识",
-          "link": "/notes/自学项目知识碎片/项目开发易忘语法知识/3.1js容易遗忘的知识"
-        },
-        {
-          "text": "js中常用的数组速记",
-          "link": "/notes/自学项目知识碎片/项目开发易忘语法知识/3.2js中常用的数组速记"
-        },
-        {
-          "text": "1.相对定位，决定定位",
-          "link": "/notes/自学项目知识碎片/项目开发易忘语法知识/4.1css易忘知识"
-        },
-        {
-          "text": "promise速记笔记",
-          "link": "/notes/自学项目知识碎片/项目开发易忘语法知识/5.1promise速记笔记"
-        },
-        {
-          "text": "proxy速记笔记",
-          "link": "/notes/自学项目知识碎片/项目开发易忘语法知识/5.2proxy速记笔记"
-        },
-        {
-          "text": "ts速记笔记",
-          "link": "/notes/自学项目知识碎片/项目开发易忘语法知识/6.1ts速记笔记"
-        },
-        {
-          "text": "vue组件封装",
-          "link": "/notes/自学项目知识碎片/项目开发易忘语法知识/vue组件封装"
-        },
-        {
-          "text": "做项目时的疑问",
-          "link": "/notes/自学项目知识碎片/做项目时的疑难记忆理解/个人博客项目博客/做项目时的疑问"
+          "text": "项目复盘",
+          "collapsed": false,
+          "items": [
+            {
+              "text": "博客项目复盘",
+              "link": "/notes/面试准备/项目复盘/博客项目复盘"
+            },
+            {
+              "text": "项目自我介绍",
+              "link": "/notes/面试准备/项目复盘/项目自我介绍"
+            },
+            {
+              "text": "云盘项目复盘",
+              "link": "/notes/面试准备/项目复盘/云盘项目复盘"
+            }
+          ]
         }
       ]
     }
