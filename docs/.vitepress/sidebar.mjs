@@ -93,26 +93,6 @@ export const sidebar = {
           ]
         },
         {
-          "text": "需求理解",
-          "collapsed": false,
-          "items": [
-            {
-              "text": "养护考核管理需求",
-              "link": "/notes/项目实践/需求理解/养护考核管理需求"
-            }
-          ]
-        },
-        {
-          "text": "个人项目",
-          "collapsed": false,
-          "items": [
-            {
-              "text": "做项目时的疑问",
-              "link": "/notes/项目实践/个人项目/做项目时的疑问"
-            }
-          ]
-        },
-        {
           "text": "开发总结",
           "collapsed": false,
           "items": [
@@ -139,10 +119,6 @@ export const sidebar = {
             {
               "text": "Vue 易忘知识点",
               "link": "/notes/专题速记/Vue/Vue 易忘知识点"
-            },
-            {
-              "text": "Vue 组件封装",
-              "link": "/notes/专题速记/Vue/Vue 组件封装"
             }
           ]
         },
@@ -167,10 +143,6 @@ export const sidebar = {
             {
               "text": "JavaScript 数组速记",
               "link": "/notes/专题速记/JavaScript/JavaScript 数组速记"
-            },
-            {
-              "text": "JavaScript 易忘知识",
-              "link": "/notes/专题速记/JavaScript/JavaScript 易忘知识"
             }
           ]
         },
@@ -263,10 +235,6 @@ export const sidebar = {
             {
               "text": "项目自我介绍",
               "link": "/notes/面试准备/项目复盘/项目自我介绍"
-            },
-            {
-              "text": "云盘项目复盘",
-              "link": "/notes/面试准备/项目复盘/云盘项目复盘"
             }
           ]
         }

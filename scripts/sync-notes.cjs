@@ -58,6 +58,9 @@ const assetExtensions = new Set([
   ".pdf"
 ]);
 
+const minNonEmptyLines = 3;
+const minMeaningfulChars = 120;
+
 const groupOrder = [
   "学习笔记",
   "项目实践",
@@ -236,6 +239,24 @@ function sanitizeMarkdown(markdown, sourceFile) {
   });
 }
 
+function getContentStats(markdown) {
+  const nonEmptyLines = markdown
+    .split(/\r?\n/)
+    .map((line) => line.trim())
+    .filter(Boolean).length;
+  const meaningfulChars = markdown.replace(/\s/g, "").length;
+
+  return {
+    nonEmptyLines,
+    meaningfulChars
+  };
+}
+
+function isSubstantive(markdown) {
+  const stats = getContentStats(markdown);
+  return stats.nonEmptyLines >= minNonEmptyLines && stats.meaningfulChars >= minMeaningfulChars;
+}
+
 function cleanTitle(rawTitle, relativePath = "") {
   const normalizedRelative = toPosix(relativePath).replace(/\.[^.]+$/i, "");
 
@@ -354,6 +375,9 @@ function copySelectedFiles() {
       ensureDir(path.dirname(targetPath));
 
       const text = fs.readFileSync(fullPath, "utf8");
+      if (!isSubstantive(text)) {
+        return;
+      }
       const sanitized = sanitizeMarkdown(text, fullPath);
       fs.writeFileSync(targetPath, sanitized, "utf8");
 
