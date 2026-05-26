@@ -2,6 +2,28 @@
 
 我的个人笔记，从有道云中同步到此。
 
+## 一键更新
+
+以后更新公开笔记，直接在仓库根目录执行：
+
+```powershell
+npm run notes:publish
+```
+
+这条命令会自动完成：
+
+1. 找到 `H:\有道云笔记` 下最新的有道导出目录
+2. 同步公开版笔记到 `docs/notes`
+3. 本地构建 VitePress，先帮你检查一遍
+4. 自动 `git add`、`git commit`、`git push`
+5. 触发 GitHub Pages 自动部署
+
+如果这次想手动指定导出目录或提交信息，也可以直接运行：
+
+```powershell
+powershell -ExecutionPolicy Bypass -File .\scripts\publish-notes.ps1 -SourceRoot "H:\有道云笔记\你的导出目录" -Message "更新实习总结"
+```
+
 ## 本地使用
 
 ```bash
@@ -18,8 +40,8 @@ npx -y node@20 npm run docs:dev
 
 ## 公开内容规则
 
-- 默认收录技术学习、项目理解、实习问题总结、面试复盘
-- 默认排除账号密码、敏感信息、每日总结、纯计划、草稿和无标题内容
+- 默认收录技术学习、项目理解、问题解决、面试复盘，以及相对完整的实习总结
+- 默认排除账号密码、敏感信息、纯计划、草稿、明显未完成的半成品内容
 - 如需调整筛选规则，编辑 `scripts/sync-notes.cjs`
 
 ## 常用命令
@@ -27,6 +49,7 @@ npx -y node@20 npm run docs:dev
 ```bash
 $env:NOTES_ROOT="H:\\有道云笔记\\你的导出目录"; npm run docs:sync
 npx -y node@20 npm run docs:build
+npm run notes:publish
 ```
 
 ## 环境说明
