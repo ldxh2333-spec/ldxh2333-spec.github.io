@@ -36,7 +36,6 @@ const allowedTopLevels = new Set([
 const excludedKeywords = [
   "项目账号密码",
   "敏感",
-  "每日总结",
   "计划",
   "草稿",
   "无标题markdown",
@@ -58,8 +57,7 @@ const assetExtensions = new Set([
   ".pdf"
 ]);
 
-const minNonEmptyLines = 3;
-const minMeaningfulChars = 120;
+const minimumMeaningfulChars = 50;
 
 const groupOrder = [
   "学习笔记",
@@ -70,7 +68,7 @@ const groupOrder = [
 
 const sectionOrder = {
   "学习笔记": ["前端基础", "框架学习", "工程协作"],
-  "项目实践": ["实习项目", "问题解决", "需求理解", "个人项目", "开发总结", "刷题 App"],
+  "项目实践": ["实习项目", "实习总结", "问题解决", "需求理解", "个人项目", "开发总结", "刷题 App"],
   "专题速记": ["Vue", "Axios", "JavaScript", "CSS", "异步编程", "TypeScript", "组件封装", "其他"],
   "面试准备": ["八股整理", "手撕题", "项目讲解", "项目复盘"]
 };
@@ -90,6 +88,7 @@ const sectionSummaries = {
   },
   "项目实践": {
     "实习项目": "实习期间参与的具体项目记录。",
+    "实习总结": "挑选保留了相对完整的实习日报，更能体现真实工作过程和成长轨迹。",
     "问题解决": "开发中遇到的问题和解决方案。",
     "需求理解": "对业务需求和页面功能的理解记录。",
     "个人项目": "个人项目中的疑问、总结和复盘。",
@@ -183,6 +182,11 @@ function hasExcludedKeyword(parts) {
   return excludedKeywords.some((keyword) => lower.includes(keyword.toLowerCase()));
 }
 
+function isDailySummaryPath(relativePath) {
+  const parts = normalizeParts(relativePath);
+  return parts[0] === "前端实习记录" && parts.includes("每日总结");
+}
+
 function isAllowedMarkdown(relativePath) {
   const parts = normalizeParts(relativePath);
   if (!parts.length) return false;
@@ -240,25 +244,151 @@ function sanitizeMarkdown(markdown, sourceFile) {
 }
 
 function getContentStats(markdown) {
-  const nonEmptyLines = markdown
+  const lines = markdown
     .split(/\r?\n/)
     .map((line) => line.trim())
-    .filter(Boolean).length;
+    .filter(Boolean);
   const meaningfulChars = markdown.replace(/\s/g, "").length;
+  const contentLines = lines.map((line) =>
+    line
+      .replace(/^#+\s*/, "")
+      .replace(/^[-*+]\s+/, "")
+      .replace(/^\d+\.\s+/, "")
+      .replace(/^\[(?: |x|X)\]\s+/, "")
+      .replace(/^>\s*/, "")
+      .trim()
+  );
+  const headingLines = lines.filter((line) => /^#+\s+/.test(line));
+  const checkboxLines = lines.filter((line) => /^[-*+]\s+\[(?: |x|X)\]/.test(line));
+  const questionLines = contentLines.filter((line) => /[?？]$/.test(line) || /为什么|怎么|如何|解释一下/.test(line));
+  const longBodyLines = contentLines.filter(
+    (line) => line.length >= 20 && !/^!?\[[^\]]*\]\([^)]+\)$/.test(line)
+  );
+  const paragraphLikeLines = contentLines.filter(
+    (line) =>
+      line.length >= 12 &&
+      !/^(?:[-*+]|\d+\.)/.test(line) &&
+      !/^!?\[[^\]]*\]\([^)]+\)$/.test(line)
+  );
 
   return {
-    nonEmptyLines,
-    meaningfulChars
+    lines,
+    nonEmptyLines: lines.length,
+    meaningfulChars,
+    contentLines,
+    headingLines,
+    checkboxLines,
+    questionLines,
+    longBodyLines,
+    paragraphLikeLines
   };
 }
 
-function isSubstantive(markdown) {
+function countFilledHeadings(lines) {
+  let headingCount = 0;
+  let filledHeadingCount = 0;
+
+  for (let index = 0; index < lines.length; index += 1) {
+    if (!/^#+\s+/.test(lines[index])) continue;
+
+    headingCount += 1;
+    let hasBody = false;
+
+    for (let cursor = index + 1; cursor < lines.length; cursor += 1) {
+      const current = lines[cursor];
+      if (/^#+\s+/.test(current)) {
+        break;
+      }
+
+      const normalized = current
+        .replace(/^[-*+]\s+\[(?: |x|X)\]\s*/, "")
+        .replace(/^[-*+]\s+/, "")
+        .replace(/^\d+\.\s+/, "")
+        .trim();
+
+      if (normalized.length >= 8 && !/^!?\[[^\]]*\]\([^)]+\)$/.test(normalized)) {
+        hasBody = true;
+        break;
+      }
+    }
+
+    if (hasBody) {
+      filledHeadingCount += 1;
+    }
+  }
+
+  return {
+    headingCount,
+    filledHeadingCount
+  };
+}
+
+function isObviouslyIncomplete(markdown) {
   const stats = getContentStats(markdown);
-  return stats.nonEmptyLines >= minNonEmptyLines && stats.meaningfulChars >= minMeaningfulChars;
+  const normalized = markdown.replace(/\s/g, "");
+  const placeholderPattern = /暂无总结|待补充|待完善|todo|tbd|占坑|未完成/i;
+  const { headingCount, filledHeadingCount } = countFilledHeadings(stats.lines);
+  const structuralOnly =
+    stats.longBodyLines.length === 0 &&
+    stats.paragraphLikeLines.length === 0 &&
+    stats.contentLines.every(
+      (line) => !line || /^!?\[[^\]]*\]\([^)]+\)$/.test(line) || line.length <= 18
+    );
+
+  if (stats.meaningfulChars < minimumMeaningfulChars) {
+    return true;
+  }
+
+  if (placeholderPattern.test(normalized) && stats.meaningfulChars < 220) {
+    return true;
+  }
+
+  if (stats.contentLines.filter(Boolean).length <= 2 && stats.questionLines.length >= 1 && stats.meaningfulChars < 160) {
+    return true;
+  }
+
+  if (stats.checkboxLines.length >= 2 && stats.longBodyLines.length === 0 && stats.meaningfulChars < 220) {
+    return true;
+  }
+
+  if (headingCount >= 2 && filledHeadingCount * 2 < headingCount && stats.meaningfulChars < 220) {
+    return true;
+  }
+
+  if (structuralOnly && stats.meaningfulChars < 160) {
+    return true;
+  }
+
+  return false;
+}
+
+function isQualifiedDailySummary(markdown) {
+  const stats = getContentStats(markdown);
+
+  if (isObviouslyIncomplete(markdown)) {
+    return false;
+  }
+
+  return stats.meaningfulChars >= 300 || stats.longBodyLines.length >= 3 || stats.nonEmptyLines >= 8;
+}
+
+function shouldPublishMarkdown(relativePath, markdown) {
+  if (isDailySummaryPath(relativePath)) {
+    return isQualifiedDailySummary(markdown);
+  }
+
+  return !isObviouslyIncomplete(markdown);
 }
 
 function cleanTitle(rawTitle, relativePath = "") {
   const normalizedRelative = toPosix(relativePath).replace(/\.[^.]+$/i, "");
+
+  if (isDailySummaryPath(relativePath)) {
+    const match = rawTitle.match(/^(\d{1,2})\.(\d{1,2})$/);
+    if (match) {
+      return `${match[1]}月${match[2]}日实习总结`;
+    }
+  }
 
   if (titleOverrides[normalizedRelative]) {
     return titleOverrides[normalizedRelative];
@@ -320,7 +450,9 @@ function classifyPath(relativePath) {
     }
   } else if (topLevel === "前端实习记录") {
     group = "项目实践";
-    if (dirParts.includes("需求理解")) {
+    if (dirParts.includes("每日总结")) {
+      section = "实习总结";
+    } else if (dirParts.includes("需求理解")) {
       section = "需求理解";
     } else if (dirParts.includes("实习过程中遇到的问题以及解决方法与知识点")) {
       section = "问题解决";
@@ -375,7 +507,7 @@ function copySelectedFiles() {
       ensureDir(path.dirname(targetPath));
 
       const text = fs.readFileSync(fullPath, "utf8");
-      if (!isSubstantive(text)) {
+      if (!shouldPublishMarkdown(relativePath, text)) {
         return;
       }
       const sanitized = sanitizeMarkdown(text, fullPath);
@@ -539,7 +671,7 @@ function writeHome(entries) {
     "## 当前一级栏目",
     "",
     "- 学习笔记：基础知识、框架学习、工程协作",
-    "- 项目实践：实习项目、问题解决、需求理解、个人项目",
+    "- 项目实践：实习项目、实习总结、问题解决、需求理解、个人项目",
     "- 专题速记：Vue、Axios、JavaScript、CSS、TypeScript 等速查内容",
     "- 面试准备：八股、手撕题、项目讲解、项目复盘",
     ""

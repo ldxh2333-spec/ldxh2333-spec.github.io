@@ -59,6 +59,24 @@ export const sidebar = {
           ]
         },
         {
+          "text": "实习总结",
+          "collapsed": false,
+          "items": [
+            {
+              "text": "10月27日实习总结",
+              "link": "/notes/项目实践/实习总结/10月27日实习总结"
+            },
+            {
+              "text": "10月28日实习总结",
+              "link": "/notes/项目实践/实习总结/10月28日实习总结"
+            },
+            {
+              "text": "11月3日实习总结",
+              "link": "/notes/项目实践/实习总结/11月3日实习总结"
+            }
+          ]
+        },
+        {
           "text": "问题解决",
           "collapsed": false,
           "items": [
@@ -231,10 +249,6 @@ export const sidebar = {
             {
               "text": "博客项目复盘",
               "link": "/notes/面试准备/项目复盘/博客项目复盘"
-            },
-            {
-              "text": "项目自我介绍",
-              "link": "/notes/面试准备/项目复盘/项目自我介绍"
             }
           ]
         }
