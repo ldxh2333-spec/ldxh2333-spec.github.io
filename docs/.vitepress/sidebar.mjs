@@ -63,6 +63,10 @@ export const sidebar = {
           collapsed: false,
           items: [
             {
+              text: "ToG 实习总览：10 秒看懂我做了什么",
+              link: "/notes/项目实践/实习总结/ToG 实习总览：10 秒看懂我做了什么",
+            },
+            {
               text: "ToG 实习周报精选：从需求开发到联调推进",
               link: "/notes/项目实践/实习总结/ToG 实习周报精选：从需求开发到联调推进",
             },
