@@ -59,9 +59,17 @@ export const sidebar = {
           ],
         },
         {
-          text: "实习总结",
+          text: "ToG 实习周报专区",
           collapsed: false,
           items: [
+            {
+              text: "ToG 实习周报精选：从需求开发到联调推进",
+              link: "/notes/项目实践/实习总结/ToG 实习周报精选：从需求开发到联调推进",
+            },
+            {
+              text: "ToG 实习复盘：需求变更、接口联调与问题推进",
+              link: "/notes/项目实践/实习总结/ToG 实习复盘：需求变更、接口联调与问题推进",
+            },
             {
               text: "10月27日实习总结",
               link: "/notes/项目实践/实习总结/10月27日实习总结",
@@ -73,10 +81,6 @@ export const sidebar = {
             {
               text: "11月3日实习总结",
               link: "/notes/项目实践/实习总结/11月3日实习总结",
-            },
-            {
-              text: "ToG 实习复盘：需求变更、接口联调与问题推进",
-              link: "/notes/项目实践/实习总结/ToG 实习复盘：需求变更、接口联调与问题推进",
             },
           ],
         },
