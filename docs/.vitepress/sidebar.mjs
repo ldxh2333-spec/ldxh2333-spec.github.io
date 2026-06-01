@@ -257,6 +257,10 @@ export const sidebar = {
               link: "/notes/面试准备/项目讲解/AI Job Coach 项目梳理",
             },
             {
+              text: "Odoo 开源 ERP 模拟实施项目",
+              link: "/notes/面试准备/项目讲解/Odoo 开源 ERP 模拟实施项目",
+            },
+            {
               text: "博客项目讲解",
               link: "/notes/面试准备/项目讲解/博客项目讲解",
             },
