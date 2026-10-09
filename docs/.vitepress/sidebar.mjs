@@ -253,6 +253,10 @@ export const sidebar = {
           collapsed: false,
           items: [
             {
+              text: "教育 SaaS AI 智能服务台",
+              link: "/notes/面试准备/项目讲解/教育 SaaS AI 智能服务台",
+            },
+            {
               text: "AI Job Coach 项目梳理",
               link: "/notes/面试准备/项目讲解/AI Job Coach 项目梳理",
             },

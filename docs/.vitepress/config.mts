@@ -4,8 +4,8 @@ import { sidebar } from "./sidebar.mjs";
 export default defineConfig({
   lang: "zh-CN",
   base: "/",
-  title: "个人学习笔记",
-  description: "公开版学习笔记与项目实践总结",
+  title: "AI 产品实践与能力沉淀",
+  description: "AI 产品实践、教育 SaaS 项目与工程能力沉淀",
   cleanUrls: true,
   lastUpdated: true,
   ignoreDeadLinks: true,
