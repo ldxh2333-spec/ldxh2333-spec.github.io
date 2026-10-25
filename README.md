@@ -4,7 +4,8 @@
 
 ## 快速入口
 
-- **综合作品集**：<https://ldxh2333-spec.github.io/portfolio/>
+- **综合能力作品集**：<https://ldxh2333-spec.github.io/portfolio/general/>
+- **教育 SaaS AI 深度案例**：<https://ldxh2333-spec.github.io/portfolio/>
 - **个人笔记站**：<https://ldxh2333-spec.github.io/>
 - **教育 SaaS AI 智能服务台项目笔记**：<https://ldxh2333-spec.github.io/notes/面试准备/项目讲解/教育%20SaaS%20AI%20智能服务台>
 - **GitHub 主页**：<https://github.com/ldxh2333-spec>
@@ -15,7 +16,7 @@
 
 个人脱敏模拟项目。基于教育数字化一线场景，围绕教师问题咨询设计知识库问答、问题分流、人工工单和进度跟进流程，并使用 Coze、Vue、Node.js 完成可交互 Demo、测试集和效果评估。
 
-- [在线作品集](https://ldxh2333-spec.github.io/portfolio/)
+- [教育 SaaS AI 深度案例](https://ldxh2333-spec.github.io/portfolio/)
 - [项目详细说明](https://ldxh2333-spec.github.io/notes/面试准备/项目讲解/教育%20SaaS%20AI%20智能服务台)
 - 该项目是个人脱敏模拟 Demo，不连接真实学校系统，不代表生产上线项目。
 
@@ -36,7 +37,7 @@
 
 真实工作经历，曾参与多所学校的数字化教学项目落地，涉及教师培训、产品演示、账号与设备准备、现场问题支持、教师回访、问题记录、数据报告和内部协同推进。
 
-- [综合作品集中的工作证据](https://ldxh2333-spec.github.io/portfolio/)
+- [综合能力作品集中的工作证据](https://ldxh2333-spec.github.io/portfolio/general/)
 - [客户沟通与交付相关笔记](https://ldxh2333-spec.github.io/notes/项目实践/实习总结/)
 
 ### ToG 前端开发实习
