@@ -2,13 +2,13 @@
 layout: home
 
 hero:
-  name: AI 产品实践与能力沉淀
-  text: 从真实业务问题到可验证的 AI 产品方案
-  tagline: 重点展示教育 SaaS 场景理解、AI 智能体与工作流设计、评测迭代和产品化 Demo，同时保留 ToG 项目协作与交付经验作为业务背景。
+  name: 李德鑫
+  text: 项目实践与个人笔记
+  tagline: 计算机科学与技术本科，具备教育数字化项目实施、客户沟通培训、前端协作与 AI 应用实践经历。
   actions:
     - theme: brand
       text: 进入作品集演示
-      link: /portfolio/
+      link: https://ldxh2333-spec.github.io/portfolio/
     - theme: brand
       text: 浏览全部笔记
       link: /notes/
@@ -26,7 +26,7 @@ features:
   - icon: 💼
     title: 作品集
     details: 教育 SaaS · AI 智能服务台：8 页可交互演示，覆盖业务洞察、服务台流程与 AI 边界、Coze 工作流、评测与优化、客户成功实践和可交互 Demo。点开就能看完一个完整项目。
-    link: /portfolio/
+    link: https://ldxh2333-spec.github.io/portfolio/
     linkText: 打开作品集 →
   - icon: 📚
     title: 笔记
