@@ -66,7 +66,7 @@ features:
 
 ## 适合快速浏览的顺序
 
-1. 点开 `作品集`（https://ldxh2333-spec.github.io/portfolio/），几分钟看完教育 SaaS AI 智能服务台从洞察到 Demo 的全链路
+1. 点开[作品集](https://ldxh2333-spec.github.io/portfolio/)，几分钟看完教育 SaaS AI 智能服务台从洞察到 Demo 的全链路
 2. 再看 `教育 SaaS AI 智能服务台` 产品笔记，了解设计背后的思路与取舍
 3. 再看 `AI Job Coach 项目梳理`，了解我对 AI 应用交互和产品化 Demo 的设计
 4. 然后看 `ToG 实习总览` 与项目复盘，了解业务理解、协作推进和交付背景
