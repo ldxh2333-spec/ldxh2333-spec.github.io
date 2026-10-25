@@ -21,6 +21,7 @@ export default defineConfig({
     logo: "/favicon.svg",
     nav: [
       { text: "首页", link: "/" },
+      { text: "作品集", link: "/portfolio/" },
       { text: "笔记", link: "/notes/" },
       { text: "GitHub", link: "https://github.com/ldxh2333-spec/ldxh2333-spec.github.io" }
     ],

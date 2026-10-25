@@ -7,44 +7,47 @@ hero:
   tagline: 重点展示教育 SaaS 场景理解、AI 智能体与工作流设计、评测迭代和产品化 Demo，同时保留 ToG 项目协作与交付经验作为业务背景。
   actions:
     - theme: brand
-      text: 查看教育 SaaS AI 服务台
-      link: /notes/面试准备/项目讲解/教育%20SaaS%20AI%20智能服务台
+      text: 进入作品集演示
+      link: /portfolio/
     - theme: brand
-      text: 查看 AI Job Coach
-      link: /notes/面试准备/项目讲解/AI%20Job%20Coach%20项目梳理
-    - theme: alt
-      text: 了解 ToG 项目经验
-      link: /notes/项目实践/实习总结/ToG%20实习总览：10%20秒看懂我做了什么
-    - theme: alt
       text: 浏览全部笔记
       link: /notes/
+    - theme: alt
+      text: 教育 SaaS 产品笔记
+      link: /notes/面试准备/项目讲解/教育%20SaaS%20AI%20智能服务台
+    - theme: alt
+      text: AI Job Coach 项目梳理
+      link: /notes/面试准备/项目讲解/AI%20Job%20Coach%20项目梳理
     - theme: alt
       text: GitHub 仓库
       link: https://github.com/ldxh2333-spec/ldxh2333-spec.github.io
 
 features:
-  - title: AI 产品从 0 到 1
-    details: 从一线业务问题出发，完成场景拆解、MVP、知识库、智能体、工作流、评测和 Demo 闭环。
-  - title: 可验证的 AI 应用设计
-    details: 用测试集、Bad Case、Code 评估器和 LLM 评估器验证路由、回复质量、安全边界与版本迭代。
-  - title: 业务理解与交付背景
-    details: 将教育 SaaS 一线实施、教师支持和 ToG 项目协作经验转化为 AI 产品设计输入。
+  - icon: 💼
+    title: 作品集
+    details: 教育 SaaS · AI 智能服务台：8 页可交互演示，覆盖业务洞察、服务台流程与 AI 边界、Coze 工作流、评测与优化、客户成功实践和可交互 Demo。点开就能看完一个完整项目。
+    link: /portfolio/
+    linkText: 打开作品集 →
+  - icon: 📚
+    title: 笔记
+    details: 30+ 篇公开笔记：AI 产品方法、ToG 实习交付复盘、前端技术速记、面试准备与项目讲解，覆盖学习路径与工作沉淀的完整记录。
+    link: /notes/
+    linkText: 浏览全部笔记 →
 ---
 
-## AI 产品重点入口
+## 作品集速览
 
-- [教育 SaaS AI 智能服务台](/notes/面试准备/项目讲解/教育%20SaaS%20AI%20智能服务台)
+- [教育 SaaS · AI 智能服务台（在线演示）](/portfolio/)
+- [教育 SaaS AI 智能服务台（产品笔记）](/notes/面试准备/项目讲解/教育%20SaaS%20AI%20智能服务台)
 - [AI Job Coach 项目梳理](/notes/面试准备/项目讲解/AI%20Job%20Coach%20项目梳理)
-- [ToG 实习总览：10 秒看懂我做了什么](/notes/项目实践/实习总结/ToG%20实习总览：10%20秒看懂我做了什么)
-- [ToG 实习周报精选：从需求开发到联调推进](/notes/项目实践/实习总结/ToG%20实习周报精选：从需求开发到联调推进)
-- [ToG 实习周报精选 2：接口联调、字段缺失与数据依赖](/notes/项目实践/实习总结/ToG%20实习周报精选%202：接口联调、字段缺失与数据依赖)
-- [ToG 实习周报精选 3：需求变更、排期冲突与风险同步](/notes/项目实践/实习总结/ToG%20实习周报精选%203：需求变更、排期冲突与风险同步)
-- [ToG 实习复盘：需求变更、接口联调与问题推进](/notes/项目实践/实习总结/ToG%20实习复盘：需求变更、接口联调与问题推进)
 
-## 其他项目与补充阅读
+## 笔记速览
 
-- [Odoo 开源 ERP 模拟实施项目](/notes/面试准备/项目讲解/Odoo%20开源%20ERP%20模拟实施项目)
 - [笔记总导航](/notes/)
+- [ToG 实习总览：10 秒看懂我做了什么](/notes/项目实践/实习总结/ToG%20实习总览：10%20秒看懂我做了什么)
+- [ToG 实习复盘：需求变更、接口联调与问题推进](/notes/项目实践/实习总结/ToG%20实习复盘：需求变更、接口联调与问题推进)
+- [Odoo 开源 ERP 模拟实施项目](/notes/面试准备/项目讲解/Odoo%20开源%20ERP%20模拟实施项目)
+- [专题速记：Vue / TypeScript / 异步编程 等](/notes/)
 
 ## 关于更新时间说明
 
@@ -55,15 +58,16 @@ features:
 
 ## 站点概览
 
-- 当前公开整理 30+ 篇笔记
+- 两块大内容：**作品集**（在线可交互 HTML 演示）与**笔记**（30+ 篇公开整理）
 - 重点包含 AI 产品项目、ToG 实习交付记录、技术学习和面试准备四类内容
-- 首页优先突出教育 SaaS AI 智能服务台和 AI Job Coach
+- 首页优先突出教育 SaaS AI 智能服务台作品集与对应产品笔记
 - 实施与交付经验作为 AI 产品设计的业务背景保留
 - 项目讲解区同时保留 AI 产品、实施和前端项目，便于按岗位查看
 
 ## 适合快速浏览的顺序
 
-1. 先看 `教育 SaaS AI 智能服务台`，了解我如何从真实业务问题完成 AI 产品闭环
-2. 再看 `AI Job Coach 项目梳理`，了解我对 AI 应用交互和产品化 Demo 的设计
-3. 再看 `ToG 实习总览` 与项目复盘，了解业务理解、协作推进和交付背景
-4. 最后看 `专题速记`、`学习笔记` 和其他项目，补充技术基础与工程能力
+1. 点开 `作品集`（/portfolio/），几分钟看完教育 SaaS AI 智能服务台从洞察到 Demo 的全链路
+2. 再看 `教育 SaaS AI 智能服务台` 产品笔记，了解设计背后的思路与取舍
+3. 再看 `AI Job Coach 项目梳理`，了解我对 AI 应用交互和产品化 Demo 的设计
+4. 然后看 `ToG 实习总览` 与项目复盘，了解业务理解、协作推进和交付背景
+5. 最后浏览 `专题速记`、`学习笔记` 等笔记区，补充技术基础与工程能力
